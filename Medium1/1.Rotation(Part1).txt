@@ -1,0 +1,17 @@
+START
+
+  # Given array called input_array
+  # assume size of array is greater that 0
+
+  SET new_array
+  SET first_element = first element of input_array
+
+  LOOP through input_array, starting from index 1 until the end of array
+    add input_array element at current index to new_array
+  END
+
+  PUSH first_element to end of new_array
+
+  RETURN new_array
+
+END
