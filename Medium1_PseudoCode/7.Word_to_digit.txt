@@ -1,0 +1,18 @@
+START
+  # Given a string str.
+  # return string replacing any alphabetic equivalent numbers with
+  # numeric reprensentation
+
+  SET new_arr array which splits the string str
+  SET result_arr array which will store the converted string
+  LOOP through each word in new_arr
+      IF regex check of word equals alphabetic equivalent of number
+        ADD equivalent to result_arr array
+      ELSE
+        ADD word to result_arr array
+      END
+  END
+
+  RETURN result_arr array joined.
+
+END

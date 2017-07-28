@@ -1,0 +1,15 @@
+START
+  # Given an number input_number
+  # Will use method rotate_rightmost_digits from second exercise.
+  # if number of digits rotated is 1, return number
+  # return number as a result of  maximun number of rotations
+
+  SET count equal to size of integer_number converted to string
+  # Need to loop through number, rotating the next digit, starting from the first one, until the second last one
+  # as the last digit is not required to be rotated.
+  LOOP (count - 1)  times
+    SET input_number equals rotate_rightmost_digits(input_number ,count)
+    REDUCE count by 1
+  END
+  RETURN input_number
+END

@@ -1,0 +1,22 @@
+START
+# Given odd integer n
+# create a 4 pointed diamond
+# Pattern  is Number of diamonds per line increment by 2, starting at 1.
+
+  SET diamond_arr as empty arr to store the pattern
+  SET diamonds string variable to store the line with diamonds
+  SET number_of_diamonds variable 1. Will keep track of how many diamonds to print
+  SET top integer variable to track to half of array. Intially set to 0
+  SET botton integer variable to track bottom half of array. Initially set to n - 1
+  LOOP
+    SET diamonds equals invoke centered method on '*' times number_of_diamonds, with width n and padding " "
+    SET diamond_arr[top] equals diamonds
+    SET diamond_arr[bottom] equals diamonds
+    INCREMENT number_of_diamonds by 2
+    DECREMENT bottom by 1
+    BREAK IF number_of_diamonds is greater than n. ()
+  END
+
+  PRINT each element of diamond_arr
+
+END

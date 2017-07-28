@@ -1,0 +1,27 @@
+START
+  # at n equals 0 begin with 1000 lights set to off
+  # iterate 1000 times and Toggle every n + 1 light
+  # return which lights are left on
+  SET lights_hash as empty hash
+  LOOP 1 to 1000 using idx variable as index
+    IF idx equals 1,  #SET hash of 1000 lights to ON
+      LOOP 1 to 1000
+        SET lights_hash key FOR each iteration to value 'ON'
+      END
+    ELSE
+      SET increment variable to equal index of outer loop
+      LOOP 1 to 1000
+        IF light_hash[increment variable] value equals 'OFF'
+          SET light_hash[increment variable] equal to 'ON'
+        ELSE IF light_hash[increment variable] value equals 'ON'
+          SET light_hash[increment variable] equal to 'OFF'
+        END
+        SET increment variable to equal itself incremented by idx of outer loop
+      END
+    END
+
+    RETURN keys from lights_hash where value equals 'ON' using SELECT method
+
+  END
+
+END

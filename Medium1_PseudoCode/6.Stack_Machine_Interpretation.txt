@@ -1,0 +1,29 @@
+START
+  # Given a string str
+  # apply rules as defined in description
+
+  SET array command_list which contains all the commands, ie: PUSH, ADD, etc...
+  SET register variable
+  SET stack array
+  LOOP through each word in str
+    IF word is not contained in command_list array
+      SET register equals word
+    ELSE IF word equals 'PUSH'
+      ADD register value to end of stack array
+    ELSE IF word equals 'ADD'
+      POP value of stack and add to register
+    ELSE IF word equals 'PRINT'
+      PRINT register value
+    ELSE IF  word  equals 'MULT'
+      POP value of stack and multiply to register
+    ELSE IF word equals 'POP'
+      POP value of stack to register
+    ELSE IF word equals 'SUB'
+      POP value of stack and subtract to register
+    ELSE IF word equals 'DIV'
+      POP value of stack and divide register by it
+    ELSE IF word equals 'MOD'
+      POP value of stack and find modulus of register and popped value.
+    END
+  END
+END

@@ -1,0 +1,9 @@
+# Given integer n as input
+# Rules given
+# 1. return 1 if n less than or equal to 2.
+# 2. formula F(n) = F(n-1) + F(n-2)
+
+START
+  RETURN 1 IF n is less than or equal to  2
+  ADD method(n-1) and method(n-2)
+END
